@@ -5,8 +5,9 @@ This is a sample CRUD application demonstrating how to build an Node.js express 
 
 1. Clone the repo
 2. Install dependencies: `npm install`
-3. [Install and run MongoDB](https://www.mongodb.com/docs/manual/installation/) on your system. This repo works on an instance running on `localhost:27017`
-4. Start the application: `nodemon app.js`
+3. [Install and run MongoDB](https://www.mongodb.com/docs/manual/installation/) on your system.
+4. Add a .env file with PORT - for the port number and DATABASE_URI - MongoDB connection string
+5. Start the application: `nodemon app.js`
 
 ## Available routes
 
