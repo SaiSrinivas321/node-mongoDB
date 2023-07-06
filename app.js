@@ -1,7 +1,10 @@
 const express = require("express");
 const { connectToDb, getDb } = require("./db");
 const { ObjectId } = require("mongodb");
+const dotenv = require("dotenv");
+dotenv.config();
 
+const PORT = process.env.PORT || 8000;
 //init app
 const app = express();
 
@@ -13,12 +16,13 @@ let db;
 
 connectToDb((err) => {
   if (!err) {
-    app.listen(8000, () => {
-      console.log("app listening on port 8000");
+    app.listen(PORT, () => {
+      console.log(`app listening on port ${PORT}`);
     });
     db = getDb();
   }
 });
+
 //routes
 app.get("/books", (req, res) => {
   // current page
